@@ -81,7 +81,7 @@
       <property name="checkable">
        <bool>false</bool>
       </property>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="saveBtn">
        <property name="geometry">
         <rect>
          <x>690</x>
