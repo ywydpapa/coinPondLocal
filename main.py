@@ -15,8 +15,7 @@ class MainClass(QMainWindow, form_class):
 
 
     def btn_clicked(self):
-        print("Button clicked")
-
+        print("버튼 클릭")
 
 
 if __name__ == '__main__':
