@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QInputDialog
 import dbconn
 
 
@@ -11,11 +11,24 @@ class MainClass(QMainWindow, form_class):
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.show()
-        self.saveBtn.clicked.connect(self.btn_clicked)
+        self.actionConnect.triggered.connect(self.connectDB)
+        self.actionQuit_2.triggered.connect(self.close)
+        self.actionSetup.triggered.connect(self.getInfo)
 
 
     def btn_clicked(self):
         print("버튼 클릭")
+
+    def connectDB(self):
+        print("DB 연결")
+
+    def getInfo(self):
+        text, ok = QInputDialog.getText(self, 'Input Dialog', 'Enter your name:')
+        if ok:
+            print(text)
+
+    def getIncomes(self):
+        dbconn.
 
 
 if __name__ == '__main__':
